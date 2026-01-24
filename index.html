@@ -13,33 +13,135 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-container">
-        <header>
-            <div class="header-row">
-                <h1 class="title">Lotto Number Generator</h1>
-                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
-                    <span class="theme-label">Dark mode</span>
-                </button>
+    <div class="app-container" id="top">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="#top">LottoLab</a>
+            <div class="nav-links">
+                <a href="#generator">Generator</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#faq">FAQ</a>
+                <a href="#partner">Partnership</a>
+                <a href="#comments">Comments</a>
             </div>
-            <p class="subtitle">Your lucky numbers are just a click away!</p>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+                <span class="theme-label">Dark mode</span>
+            </button>
+        </nav>
+        <header class="hero">
+            <p class="eyebrow">Trusted random picks for everyday fun</p>
+            <h1 class="title">Lotto Number Generator</h1>
+            <p class="subtitle">Generate six unique numbers instantly, learn the process, and explore fair-play tips.</p>
         </header>
         <main>
-            <div id="lotto-numbers-container" class="lotto-numbers-container">
-                <!-- Lotto balls will be generated here -->
-            </div>
-            <button id="generate-button" class="generate-button">
-                <span class="button-text">Generate Numbers</span>
-                <span class="button-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
-                        <path d="M5 3v4"></path>
-                        <path d="M19 17v4"></path>
-                        <path d="M3 5h4"></path>
-                        <path d="M17 19h4"></path>
-                    </svg>
-                </span>
-            </button>
-            <section class="contact-section" aria-label="Partnership inquiry">
+            <section id="generator" class="card-section" aria-label="Lotto generator">
+                <div id="lotto-numbers-container" class="lotto-numbers-container">
+                    <!-- Lotto balls will be generated here -->
+                </div>
+                <button id="generate-button" class="generate-button">
+                    <span class="button-text">Generate Numbers</span>
+                    <span class="button-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                            <path d="M5 3v4"></path>
+                            <path d="M19 17v4"></path>
+                            <path d="M3 5h4"></path>
+                            <path d="M17 19h4"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div class="mini-stats">
+                    <div>
+                        <p class="stat-label">Set size</p>
+                        <p class="stat-value">6 numbers</p>
+                    </div>
+                    <div>
+                        <p class="stat-label">Range</p>
+                        <p class="stat-value">1 - 45</p>
+                    </div>
+                    <div>
+                        <p class="stat-label">Unique picks</p>
+                        <p class="stat-value">No duplicates</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-it-works" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">How it works</h2>
+                    <p class="section-subtitle">Transparent logic and simple steps, so you know exactly what happens.</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <p class="step-number">01</p>
+                        <h3 class="step-title">Pick unique numbers</h3>
+                        <p>We randomly select numbers from 1 to 45 and ensure every pick is unique.</p>
+                    </div>
+                    <div class="step-card">
+                        <p class="step-number">02</p>
+                        <h3 class="step-title">Sort for clarity</h3>
+                        <p>Numbers are sorted so you can quickly scan your results without confusion.</p>
+                    </div>
+                    <div class="step-card">
+                        <p class="step-number">03</p>
+                        <h3 class="step-title">Animate the reveal</h3>
+                        <p>Each ball appears in sequence to make the draw feel lively and engaging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Why people use LottoLab</h2>
+                    <p class="section-subtitle">A clean, focused experience built for fairness and clarity.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Clear UX</h3>
+                        <p>Minimal distractions so you can generate numbers fast, on any device.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Transparent logic</h3>
+                        <p>No hidden tricks. The logic is simple, visible, and reproducible.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Responsible play</h3>
+                        <p>We remind users that lottery play is entertainment, not a guarantee.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Fair play reminder</h2>
+                    <p class="section-subtitle">Lottery games are for entertainment. Stay in control and play responsibly.</p>
+                </div>
+                <div class="notice-card">
+                    <p>Numbers are generated randomly and do not increase your odds of winning. Set limits, avoid chasing losses, and seek help if lottery play stops feeling fun.</p>
+                </div>
+            </section>
+
+            <section id="faq" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">FAQ</h2>
+                    <p class="section-subtitle">Quick answers to the most common questions.</p>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Are the numbers truly random?</summary>
+                        <p>We use JavaScript's built-in randomization to pick numbers, then filter duplicates.</p>
+                    </details>
+                    <details>
+                        <summary>Can I regenerate until I like the set?</summary>
+                        <p>Yes. Tap the button as many times as you want to explore different combinations.</p>
+                    </details>
+                    <details>
+                        <summary>Does this improve my odds?</summary>
+                        <p>No. The lottery is random. This tool helps you choose numbers, not guarantee outcomes.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section id="partner" class="contact-section" aria-label="Partnership inquiry">
                 <h2 class="section-title">Partnership Inquiry</h2>
                 <p class="section-subtitle">Tell us about your collaboration idea.</p>
                 <form class="contact-form" action="https://formspree.io/f/xbdgqyvn" method="POST">
@@ -62,11 +164,27 @@
                     <button class="submit-button" type="submit">Send Inquiry</button>
                 </form>
             </section>
+
+            <section id="privacy" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Privacy & terms</h2>
+                    <p class="section-subtitle">We respect your data and keep things straightforward.</p>
+                </div>
+                <div class="notice-card">
+                    <p><strong>Privacy:</strong> We do not collect personal data unless you submit the partnership form. Form submissions are handled by Formspree and used only to respond to your inquiry.</p>
+                    <p><strong>Cookies:</strong> Third-party services (Google AdSense, Disqus) may use cookies or identifiers to serve and measure ads or comments.</p>
+                    <p><strong>Terms:</strong> This tool is provided as-is for entertainment. It does not guarantee outcomes. Last updated: 2024-10-01.</p>
+                </div>
+            </section>
         </main>
         <footer>
             <p>Built with ❤️ using HTML, CSS, and JavaScript</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy</a>
+                <a href="#partner">Contact</a>
+            </div>
         </footer>
-        <section class="comments-section" aria-label="Comments">
+        <section id="comments" class="comments-section" aria-label="Comments">
             <div id="disqus_thread"></div>
             <script>
                 /**
