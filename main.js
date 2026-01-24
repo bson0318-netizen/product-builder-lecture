@@ -1,6 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     const lottoNumbersContainer = document.getElementById('lotto-numbers-container');
     const generateButton = document.getElementById('generate-button');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        themeToggle.setAttribute(
+            'aria-label',
+            theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+        themeToggle.querySelector('.theme-label').textContent =
+            theme === 'dark' ? 'Light mode' : 'Dark mode';
+        localStorage.setItem('theme', theme);
+    };
+
+    const initTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+            setTheme(savedTheme);
+            return;
+        }
+
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark ? 'dark' : 'light');
+    };
 
     const generateLottoNumbers = () => {
         lottoNumbersContainer.innerHTML = '';
@@ -36,7 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     generateButton.addEventListener('click', generateLottoNumbers);
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        setTheme(isDark ? 'light' : 'dark');
+    });
 
     // Initial generation on page load
+    initTheme();
     generateLottoNumbers();
 });
