@@ -111,6 +111,86 @@ main {
     margin-bottom: 30px;
 }
 
+.contact-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(127, 140, 141, 0.2);
+    text-align: left;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.section-subtitle {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.field-label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border-radius: 12px;
+    border: 1px solid rgba(127, 140, 141, 0.25);
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: var(--card-bg);
+    color: var(--text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: rgba(52, 152, 219, 0.8);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.submit-button {
+    justify-self: start;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--button-grad);
+    color: #ffffff;
+    box-shadow: var(--button-shadow);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--button-shadow-hover);
+    background: var(--button-grad-hover);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: var(--button-shadow-active);
+}
+
 .lotto-numbers-container {
     display: flex;
     justify-content: center;
@@ -207,5 +287,10 @@ footer {
     .generate-button {
         padding: 12px 25px;
         font-size: 1.1rem;
+    }
+
+    .contact-section {
+        margin-top: 32px;
+        padding-top: 24px;
     }
 }

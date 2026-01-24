@@ -36,6 +36,29 @@
                     </svg>
                 </span>
             </button>
+            <section class="contact-section" aria-label="Partnership inquiry">
+                <h2 class="section-title">Partnership Inquiry</h2>
+                <p class="section-subtitle">Tell us about your collaboration idea.</p>
+                <form class="contact-form" action="https://formspree.io/f/xbdgqyvn" method="POST">
+                    <label class="form-field">
+                        <span class="field-label">Name</span>
+                        <input type="text" name="name" placeholder="Jane Doe" required>
+                    </label>
+                    <label class="form-field">
+                        <span class="field-label">Email</span>
+                        <input type="email" name="email" placeholder="jane@email.com" required>
+                    </label>
+                    <label class="form-field">
+                        <span class="field-label">Company</span>
+                        <input type="text" name="company" placeholder="Acme Inc.">
+                    </label>
+                    <label class="form-field">
+                        <span class="field-label">Message</span>
+                        <textarea name="message" rows="4" placeholder="Share your proposal..." required></textarea>
+                    </label>
+                    <button class="submit-button" type="submit">Send Inquiry</button>
+                </form>
+            </section>
         </main>
         <footer>
             <p>Built with ❤️ using HTML, CSS, and JavaScript</p>
